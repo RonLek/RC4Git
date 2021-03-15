@@ -149,10 +149,10 @@ export default function ActivityPane(props) {
           </div>
         )}
         {webhookId &&
-          events.map((event) => {
+          events.map((event, index) => {
             return (
               <ActivityItem
-                key={event._id}
+                key={index}
                 event={event}
                 repo={props.location.pathname.split("/")[2].replace("_", "/")}
               />
