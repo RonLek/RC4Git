@@ -69,7 +69,7 @@ export default function ActivityPane(props) {
           setWebhookId(null);
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {return });
 
     const checkIfUserIsOwner = async () => {
       try {
@@ -91,7 +91,6 @@ export default function ActivityPane(props) {
           setIsRepoOwner(ghRepoResponse.data.permissions.admin);
         }
       } catch (error) {
-        console.log(error);
       }
     };
     checkIfUserIsOwner();

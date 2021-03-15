@@ -55,7 +55,6 @@ export default function ConfigureWebhook(props) {
       props.setSnackbar("success", "Webhook created successfully!");
       props.setOpenWebhookDialog(false);
     } catch (error) {
-      console.log(error.response.data.errors);
       setLoading(false);
       props.setSnackbar("error", error.response.data.errors[0].message);
     }
@@ -82,7 +81,6 @@ export default function ConfigureWebhook(props) {
       props.setSnackbar("success", "Webhook updated successfully!");
       props.setOpenWebhookDialog(false);
     } catch (error) {
-      console.log(error.response.data.errors);
       setLoading(false);
       props.setSnackbar("error", error.response.data.errors[0].message);
     }
@@ -110,7 +108,6 @@ export default function ConfigureWebhook(props) {
       props.setSnackbar("success", "Webhook deleted successfully!");
       props.setOpenWebhookDialog(false);
     } catch (error) {
-      console.log(error.response.data.errors);
       setDeleteLoading(false);
       props.setSnackbar("error", error.response.data.errors[0].message);
     }

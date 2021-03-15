@@ -87,7 +87,6 @@ export default function RoomInfo(props) {
         });
         setRepoInfo(ghRepoInfoResponse.data);
       } catch (error) {
-        console.log(error);
         setIsPrivate(true);
       }
     };

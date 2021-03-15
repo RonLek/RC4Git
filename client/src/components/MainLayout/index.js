@@ -35,7 +35,7 @@ export default function MainLayout(props) {
           window.location.href =
             window.location.origin + Cookies.get("gh_upgrade_prev_path");
         })
-        .catch((error) => console.log(error));
+        .catch((error) => {return });
     }
   });
   
